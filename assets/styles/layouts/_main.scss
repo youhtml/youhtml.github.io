@@ -1,0 +1,347 @@
+main {
+  margin: 0 auto;
+  .store {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background: white;
+    // height: 50vh;
+    @media screen and (max-width: 770px) {
+      display: grid;
+      grid-template-columns: 1fr;
+      width: 100%;
+    }
+    .left {
+      height: 100%;
+      @include center;
+      .left-container {
+        height: 90%;
+        width: 90%;
+        border: 1px dashed $gold;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        @media screen and ((max-width: 1130px)){
+          font-size: 0.6rem;
+          h2 {
+            font-size: 0.6rem;
+          }
+        }
+      
+        
+      }
+    }
+    .right {
+      height: 100%;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+  section {
+    height: 100%;
+    position: relative;
+    .discover {
+      h2 {
+        margin-top: 80px;
+      }
+     
+    }
+    .b {
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      transform: translateY(25%);
+      img {
+        width: 100%;
+      }
+    }
+    .back-one {
+      height: auto;
+      width: 50%;
+      margin: 0 auto 200px;
+      z-index: 2;
+      @media screen and (max-width: 1000px) {
+        
+        width: 90%;
+      }
+     
+     
+      nav {
+        height: 50px;
+      
+          ul {
+          width: 100%;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          font-family: $font2;
+          text-transform: capitalize;
+          color: $white;
+          li {
+            border-bottom: 1px solid $white;
+            &:hover {
+              @include anim;
+              cursor: pointer;
+              border-bottom: 1px solid $gold;
+
+            }
+          }
+        }
+      }
+      .menu {
+        position: relative;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        background: white;
+        height: 80vh;
+        padding-left: 10px;
+        margin-bottom: 250px;
+        @media screen and (max-width: 1000px) {
+          display: grid;
+          grid-template-columns: 1fr;
+          width: 100%;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 3px;
+          background: $gold;
+        }
+        // &::after {
+
+        //   content: url(div);
+        //   position: absolute;
+        //   z-index: -1;
+        //   transform: translate(-65%, 20%);
+      
+        // }
+
+        .menu-left,
+        .menu-right {
+          
+          display: grid;
+          grid-template-rows: 1fr 1fr 1fr 1fr;
+          .menu-name {
+            padding-left: 10px;
+            text-align: left;
+            
+            h5 {
+              @include title2;
+              color: $black;
+              @media screen and (max-width: 1130px) {
+                font-size: 1rem;
+              }
+              }
+            }
+            p {
+              padding: 0;
+              // width: 100%;
+              font-family: $font3;
+              text-transform: capitalize;
+              @media screen and (max-width: 1130px) {
+                font-size: 1rem;
+              }
+              
+            }
+          }
+          img {
+            max-width: 60px;
+            max-height: 60px;
+            border-radius: 80px;
+
+          }
+          
+        }
+    }
+      
+      .online {
+      width: 70%;
+      margin: 250px auto;
+      display: grid;
+      grid-template-columns: 30% 70%;
+        @media screen and (max-width: 800px) {
+          display: grid;
+          grid-template-columns: 1fr;
+          width: 90%;
+          margin:  auto ;
+        }
+      .open {
+        background: black;
+        height: 400px;
+        @include center;
+    
+        .open-dashed {
+          // margin: 20px;
+          border: 1px dashed $gold;
+          padding: 10px;
+          width: 90%;
+          height: 90%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          h3 {
+            font-size: 1rem;
+            color: $white;
+          }
+          h6 {
+            margin: 5px;
+          }
+          p {
+            padding: 0;
+            font-family: $font3;
+            text-transform: capitalize;
+            color: $white;
+            font-size: 0.8rem;
+          }
+        }
+      }
+      .booking {
+        background: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+       
+        button {
+          margin: 50px;
+          width: 150px;
+          height: 40px;
+          border-radius: 20px;
+          background: $black;
+          @include title2;
+          color: $white;
+          cursor: pointer;
+        }
+        
+        .formular {
+          width: 100%;
+          height: 20%;
+          display: grid;
+          grid-template-columns: 25% 25% 25%;
+          gap: 30px;
+          justify-content: center;
+          
+          input,
+          select {
+            border: hidden;
+            border-bottom: 1px solid $blur;
+          }
+        }
+      }
+    }
+    h3 {
+      color: $white;
+    }
+    
+    .upcoming{
+      @media screen and (max-width: 800px) {
+        display: none;
+       }
+    }
+    .celebration {
+      display: grid;
+      grid-template-columns: 60% 40%;
+      gap: 15px;
+      width: 65%;
+      height: 50vh;
+      margin: auto;
+
+      @media screen and (max-width: 800px) {
+        display: none;
+       }
+      .left-celebration {
+        text-align: left;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        gap: 15px;
+        .party {
+          display: grid;
+          grid-template-columns: 30% 70%;
+          
+          .bottle {
+            background: url(/Maquette-resto/assets/img/bouteille.jpg)
+              center/cover;
+            width: 100%;
+            height: 100%;
+            @include center;
+          }
+          .table {
+            background: url(/Maquette-resto/assets/img/event-02.jpg)
+              center/cover;
+            width: 100%;
+            height: 100%;
+            @include center;
+          }
+        }
+        .right-party {
+          background: white;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: start;
+          padding: 10px;
+          h6 {
+            font-family: $font3;
+            text-transform: capitalize;
+            padd
+            p {
+              font-family: $font3;
+              text-transform: capitalize;
+              color: $blur;
+              padding: 0;
+            }
+          }
+          
+        }
+      }
+    }
+      .right-celebration {
+        background: url(/Maquette-resto/assets/img/event-03.jpg) center/cover;
+        @include center;
+        .thousands {
+          height: 80%;
+          width: 80%;
+          background: white;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+        }
+      }
+    }
+    .map {
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 300px;
+      background: url(/Maquette-resto/assets/img/gmap.jpg);
+      transform: translateY(55%);
+     }
+    .ceo {
+      position: relative;
+      width: 65%;
+      background: white;
+      margin: 150px auto;
+      padding: 20px;
+
+      @media screen and (max-width: 800px) {
+        width: 90%;
+       }
+       
+      .cook {
+        position: absolute;
+        margin-top: 0;
+        left: 50%;
+        transform: translate(-50%, -100%);
+      }
+    }
+    
+    
+  }
+    

@@ -1,0 +1,107 @@
+header {
+    background: url(/Maquette-resto/assets/img/bg-slider-06.jpg) center/cover;
+    // min-height: 100vh;
+    // width: 100vw;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+
+    .nav {
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1100px;
+        height: 70px;
+        color: $white;
+        @media screen and (max-width: 1130px) {
+            width: 70%;
+            font-size: 0.8rem; 
+            h2 {
+                font-size: 1.5rem;
+                transform: translateY(50%);
+                
+            }
+            }
+            
+            h2 {
+                
+            color: $white;
+            &:hover{
+                @include anim;
+            }
+    
+        }
+        nav {
+            width: 70%;
+            
+            ul {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                text-transform: uppercase;
+                font-family: $font3;
+                font-size: 0.8rem;
+                @media screen and (max-width: 1130px) {
+                    font-size: 0.6rem;
+                }
+                @media screen and (max-width: 630px) {
+                    display: none;
+                }
+                li:hover {
+                    @include anim;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+        .icons {
+            width: 10%;
+            display: flex;
+            justify-content: space-between;
+            @media screen and (max-width: 603px) {
+                width: 40%;
+            }
+        }
+        
+        
+        .title {
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            h1 {
+                @include title2;
+                font-size: 4.5rem;
+                color: $white;
+                letter-spacing: 3px;
+                @media screen and (max-width: 1130px) {
+                    font-size: 3.5rem;
+                }
+                
+            }
+        }
+        h2 {
+            font-size: 3.5rem;
+            margin-bottom: -30px;
+            @media screen and (max-width: 1130px) {
+                font-size: 2.5rem;
+                margin-bottom: 30px;
+            }
+          
+        }
+        p {
+            margin-top: 30px;
+            font-family: $font3;
+            color: $white;
+            font-size: 1.5rem;
+            letter-spacing: 5px;
+            @media screen and (max-width: 1130px) {
+                font-size: 0.8rem;
+            }
+        }
+    }
+        
+        

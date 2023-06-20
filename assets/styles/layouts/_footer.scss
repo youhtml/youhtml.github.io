@@ -1,0 +1,75 @@
+footer {
+    background: url(/Maquette-resto/assets/img/bg-footer.jpg) center/cover;
+    height: auto;
+    @media screen and (max-width: 800px) {
+        background: none;
+        height: 500px;
+       }
+    
+    .end-part {
+    
+        margin: auto;
+        width: 65%;
+        height: 60%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        align-items: center;
+        text-align: left;
+        
+        .left-end {
+            padding: 20px;
+            
+            @media screen and (max-width: 800px) {
+                display: none;
+            
+               }
+
+            p{
+                font-family: $font3;
+                color: $white;
+                letter-spacing: 1px;
+                line-height: 2em;
+                font-size: 0.8rem;
+            }
+        }
+        .right-end {
+           
+            padding-left: 20px;
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            color: $blur;
+            @media screen and (max-width: 800px) {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: left;
+               }
+           
+            h3 {
+                font-size: 0.8rem;
+                color: $white;
+            }
+            input{
+                background: none;
+                border: 1px solid $gold;
+                padding: 5px;
+                width: 60%;
+                color: $white;
+            }
+            .social {
+                width: 80%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                p{
+                
+                 padding: 0;
+                }
+            }
+
+        }
+    }
+}

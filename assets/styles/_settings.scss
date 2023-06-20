@@ -1,0 +1,163 @@
+@font-face {
+    font-family: "allura";
+    src: url(../fonts/Allura-Regular.ttf);
+}
+@font-face {
+    font-family: "poppins";
+    src: url(../fonts/Poppins-Medium.ttf);
+}
+@font-face {
+    font-family: "roboto";
+    src: url(../fonts/Roboto-Light.ttf);
+}
+$font1: allura;
+$font2: poppins;
+$font3: roboto;
+$gold: rgba(197, 95, 0, 0.918);
+$white:rgb(252, 243, 243);
+$black:rgb(0, 0, 0);
+$blur:rgba(97, 97, 97, 0.473);
+$back:rgb(34, 29, 29);
+
+@mixin title1 {
+    font-family: $font1;
+    text-transform:capitalize;
+    color: $gold;
+    font-size: 1.8rem;
+}
+@mixin title2 {
+    font-family: $font2;
+    text-transform: uppercase;
+}
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin anim {
+            color: $gold;
+            transform: scale(1.08);
+            transition: 0.4s ease-out;
+    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+body {
+    background: $back;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+i {
+    &:hover {
+        @include anim;
+    }
+    
+}
+h2 {
+    @include title1;
+    @media screen and (max-width: 770px) {
+        font-size: 0.8rem;
+      }
+}
+h3 {
+    @include title2;
+    color: $black;
+}
+h4 {
+    font-family: $font2;
+    text-transform: capitalize;
+}
+h6 {
+    font-family: $font2;
+    text-transform: uppercase;
+    color: $gold;
+    font-size: 0.8rem;
+}
+
+nav {
+    display: flex;
+}
+.the {
+    max-width: 40px;
+    max-height: 40px;
+    margin: 20px auto;
+
+    &:hover {
+        @include anim;
+        }
+        @media screen and (max-width: 1130px) {
+            margin: 20px auto;
+        }
+    }
+    .gold {
+        font-family: $font2;
+        color: $gold;
+      }
+.cook {
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 80px;
+    margin: 50px auto 20px;
+    @media screen and (max-width: 1130px) {
+        margin: 10px auto 10px;
+    }
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+.event {
+    font-family: $font3;
+    color: $black;
+    text-transform: capitalize;
+    font-size: 1rem;
+    padding-left: 10px;
+    //   they are the last h6 title
+
+}
+.tickets {
+  @include title2;
+  font-size: 0.8rem;
+//   thi is the p tickets
+}
+.date {
+    height: 80px;
+    width: 80px;
+    background: $back;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .day{
+        font-family: $font2;
+        color: $white;
+        padding: 0;
+        font-size: 1.5rem;
+    }
+    .month{
+        font-family: $font3;
+        text-transform: capitalize;
+        color: $white;
+        padding: 0;
+        font-size: 1.2rem;
+    }
+    .cheef-name {
+        @include title2;
+        color: $blur;
+    }
+
+}
+    
+    
+
