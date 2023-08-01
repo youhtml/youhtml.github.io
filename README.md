@@ -1,1 +1,1 @@
-Le restaurant# youhtml.github.io
+Le restaurant. Réalisé avec sass.
